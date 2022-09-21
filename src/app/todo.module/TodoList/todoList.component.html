@@ -1,11 +1,11 @@
 <div class="inputWrapper">
 
-  <input class="inputElement" [ngModel]="inpElem.value" (ngModelChange)="changeInputColor(inpElem)"
-         [ngStyle]="{backgroundColor: disabled ? 'rgba(182, 167, 167, 0.67)' : 'rgb(180, 189, 222,0.5)'}"
+  <input class="inputElement" [ngModel]="inpElem.value"
+         [ngStyle]="{backgroundColor: inpElem.value ? 'rgba(182, 167, 167, 0.67)' : 'rgb(180, 189, 222,0.5)'}"
          #inpElem placeholder="Введіть завдання">
 
-  <button class="btn" [ngClass]="disabled ? 'button' : 'hideButton' "
-          (click)="getValueFromInput(inpElem)">{{disabled ? 'Додати' : ''}}
+  <button class="btn" [ngClass]="inpElem.value ? 'button' : 'hideButton' "
+          (click)="getValueFromInput(inpElem)">{{inpElem.value ? 'Додати' : ''}}
   </button>
 
 </div>

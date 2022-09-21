@@ -18,9 +18,6 @@ export class TodoListComponent{
   }
 
 
-  changeInputColor(inpElem: string | any) {
-    this.disabled = inpElem.value.length >= 1;
-  }
 
   getValueFromInput(inpElem: string | any) {
     if (inpElem.value) {
