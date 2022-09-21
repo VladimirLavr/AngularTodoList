@@ -4,28 +4,26 @@ import {Component} from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 
 export class AppComponent {
   todo: string = '';
   todos: string[] = [];
   disabled = false;
+  image = 'https://w7.pngwing.com/pngs/643/421/png-transparent-computer-icons-shopping-cart-shopping-cart-text-service-logo.png';
 
 
-  delItem(newItem: string) {
+  removeItem(newItem: string) {
     this.todos = this.todos.filter(items => items !== newItem);
-    console.log(this.todos);
   }
 
 
-  changeInp(inpElem: string | any) {
-    if (inpElem.value.length >= 1) {
-      this.disabled = true
-    } else this.disabled = false
+  changeInput(inpElem: string | any) {
+    this.disabled = inpElem.value.length >= 1;
   }
 
-  getValue(inpElem: string | any) {
+  getValueFromInput(inpElem: string | any) {
     if (inpElem.value) {
       this.todo = inpElem.value
       this.todos.push(this.todo)

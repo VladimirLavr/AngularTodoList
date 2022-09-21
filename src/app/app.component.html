@@ -1,16 +1,16 @@
 <div class="container">
-  <div class="inpWrapper">
+  <div class="inputWrapper">
 
-    <input [ngModel]="inpElem.value" (ngModelChange)="changeInp(inpElem)"
+    <input class="inputElement" [ngModel]="inpElem.value" (ngModelChange)="changeInput(inpElem)"
            [ngStyle]="{backgroundColor: disabled ? 'rgba(182, 167, 167, 0.67)' : 'rgb(180, 189, 222,0.5)'}"
            #inpElem placeholder="Введіть завдання">
 
-    <button [ngClass]="disabled ? 'button' : 'hideButton' "
-            (click)="getValue(inpElem)">{{disabled ? 'Додати' : 'Не додати'}}
+    <button class="btn" [ngClass]="disabled ? 'button' : 'hideButton' "
+            (click)="getValueFromInput(inpElem)">{{disabled ? 'Додати' : ''}}
     </button>
 
   </div>
 
-  <app-todoItem *ngFor="let item of todos" [todo]="item" [todos]="todos " (itemDel)="delItem($event)"></app-todoItem>
+  <app-todo-item *ngFor="let item of todos" [todo]="item" [todos]="todos " [image]="image" (itemDel)="removeItem($event)"></app-todo-item>
 
 </div>

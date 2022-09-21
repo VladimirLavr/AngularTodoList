@@ -1,0 +1,37 @@
+.container {
+  margin: 30px auto;
+  width: 50%;
+  text-align: center;
+
+  .inputWrapper {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+  }
+
+  .inputElement {
+    padding: 0 10px;
+    border-radius: 10px;
+    background-color: rgba(182, 167, 167, 0.67);
+    width: 70%;
+  }
+
+  .btn {
+    transition: ease-in-out 0.4s;
+    width: 20%;
+    border-radius: 10px;
+    background-color: #4265bd;
+    border: rgba(169, 169, 169, 0.37) 2px solid;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #6c9e7d;
+    }
+  }
+
+  .hideButton {
+    background-color: #72cacb;
+  }
+}
