@@ -1,0 +1,13 @@
+<div class="inputWrapper">
+
+  <input class="inputElement" [ngModel]="inpElem.value" (ngModelChange)="changeInput(inpElem)"
+         [ngStyle]="{backgroundColor: disabled ? 'rgba(182, 167, 167, 0.67)' : 'rgb(180, 189, 222,0.5)'}"
+         #inpElem placeholder="Введіть завдання">
+
+  <button class="btn" [ngClass]="disabled ? 'button' : 'hideButton' "
+          (click)="getValueFromInput(inpElem)">{{disabled ? 'Додати' : ''}}
+  </button>
+
+</div>
+
+<app-todo-item *ngFor="let item of todos" [todo]="item" [todos]="todos " [image]="image" (itemDel)="removeItem($event)"></app-todo-item>
