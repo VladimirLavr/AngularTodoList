@@ -24,7 +24,6 @@ export class TodoListComponent{
       this.todo = inpElem.value
       this.todos.push(this.todo)
       inpElem.value = ''
-      this.disabled = false
     }
   }
 }
