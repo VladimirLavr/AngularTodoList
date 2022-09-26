@@ -29,3 +29,50 @@
 .hideButton {
   background-color: #72cacb;
 }
+
+@media (max-width: 1200px) {
+  .btn {
+    width: 22%;
+  }
+}
+
+@media (max-width: 991px) {
+  .btn {
+    width: 22%;
+  }
+}
+
+@media (max-width: 767px) {
+  .inputElement {
+    width: 60%;
+  }
+  .btn {
+    width: 25%;
+  }
+}
+
+@media (max-width: 575px) {
+  .inputElement {
+    width: 50%;
+    font-size: 12px;
+  }
+  .btn {
+    width: 40%;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+
+
+@media (max-width: 370px) {
+
+  .inputElement {
+    width: 40%;
+    font-size: 10px;
+  }
+  .btn {
+    width: 40%;
+    font-size: 10px;
+  }
+}
+
