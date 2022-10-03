@@ -10,4 +10,5 @@
 
 </div>
 
-<app-todo-item *ngFor="let item of todos" [todo]="item" [image]="image" (deleteTodo)="removeItem($event)"></app-todo-item>
+<app-todo-item *ngFor="let item of todos" [todo]="item" [image]="image"
+               (deleteTodo)="removeItem($event)"></app-todo-item>

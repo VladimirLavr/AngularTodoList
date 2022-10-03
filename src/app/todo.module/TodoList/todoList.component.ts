@@ -6,7 +6,7 @@ import {Component} from "@angular/core";
   styleUrls: ['./todoList.component.scss']
 })
 
-export class TodoListComponent{
+export class TodoListComponent {
   todo: string = '';
   todos: string[] = [];
   image = 'https://w7.pngwing.com/pngs/643/421/png-transparent-computer-icons-shopping-cart-shopping-cart-text-service-logo.png';
@@ -15,7 +15,6 @@ export class TodoListComponent{
   removeItem(newItem: string) {
     this.todos = this.todos.filter(items => items !== newItem);
   }
-
 
 
   addTodo(inpElem: string | any) {
