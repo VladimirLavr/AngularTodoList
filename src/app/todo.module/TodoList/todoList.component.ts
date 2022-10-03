@@ -9,7 +9,6 @@ import {Component} from "@angular/core";
 export class TodoListComponent {
   todo: string = '';
   todos: string[] = [];
-  image = 'https://w7.pngwing.com/pngs/643/421/png-transparent-computer-icons-shopping-cart-shopping-cart-text-service-logo.png';
 
 
   removeItem(newItem: string) {
