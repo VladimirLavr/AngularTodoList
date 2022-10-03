@@ -5,9 +5,9 @@
          #inpElem placeholder="Введіть завдання">
 
   <button class="btn" [ngClass]="inpElem.value ? 'button' : 'hideButton' "
-          (click)="getValueFromInput(inpElem)">{{inpElem.value ? 'Додати завдання' : 'Нічого нема :(('}}
+          (click)="addTodo(inpElem)">{{inpElem.value ? 'Додати завдання' : 'Нічого нема :(('}}
   </button>
 
 </div>
 
-<app-todo-item *ngFor="let item of todos" [todo]="item" [todos]="todos " [image]="image" (itemDel)="removeItem($event)"></app-todo-item>
+<app-todo-item *ngFor="let item of todos" [todo]="item" [image]="image" (deleteTodo)="removeItem($event)"></app-todo-item>

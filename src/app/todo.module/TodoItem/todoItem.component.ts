@@ -9,12 +9,11 @@ import {Component, EventEmitter, Input, Output} from "@angular/core";
 
 export class TodoItemComponent {
   @Input() todo: string = '';
-  @Input() todos: string[] = [];
   @Input() image: any;
-  @Output() itemDel = new EventEmitter<string>;
+  @Output() deleteTodo = new EventEmitter<string>;
 
 
   deleteItem(event: string | any) {
-    this.itemDel.emit(event.path[1].outerText);
+    this.deleteTodo.emit(event.path[1].outerText);
   }
 }

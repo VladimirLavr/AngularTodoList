@@ -9,7 +9,6 @@ import {Component} from "@angular/core";
 export class TodoListComponent{
   todo: string = '';
   todos: string[] = [];
-  disabled = false;
   image = 'https://w7.pngwing.com/pngs/643/421/png-transparent-computer-icons-shopping-cart-shopping-cart-text-service-logo.png';
 
 
@@ -19,7 +18,7 @@ export class TodoListComponent{
 
 
 
-  getValueFromInput(inpElem: string | any) {
+  addTodo(inpElem: string | any) {
     if (inpElem.value) {
       this.todo = inpElem.value
       this.todos.push(this.todo)
