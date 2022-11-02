@@ -18,9 +18,15 @@ export class TodoListComponent {
 
   addTodo(inpElem: string | any) {
     if (inpElem.value) {
-      this.todo = inpElem.value
-      this.todos.push(this.todo)
-      inpElem.value = ''
+      this.todo = inpElem.value;
+      this.todos.unshift(this.todo);
+      inpElem.value = '';
+    }
+  }
+
+  addTodoOnEnter(event: any, inpElem: string | any) {
+    if (event.key == 'Enter') {
+      this.addTodo(inpElem);
     }
   }
 }

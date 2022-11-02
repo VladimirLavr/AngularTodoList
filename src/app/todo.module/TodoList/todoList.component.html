@@ -1,6 +1,8 @@
 <div class="inputWrapper">
 
-  <input class="inputElement" [ngModel]="inpElem.value"
+  <input class="inputElement"
+         (keydown)="addTodoOnEnter($event,inpElem)"
+         [ngModel]="inpElem.value"
          [ngStyle]="{backgroundColor: inpElem.value ? 'rgba(182, 167, 167, 0.67)' : 'rgb(180, 189, 222,0.5)'}"
          #inpElem placeholder="Введіть завдання">
 
