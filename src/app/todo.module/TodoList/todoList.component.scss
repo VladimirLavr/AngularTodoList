@@ -1,0 +1,77 @@
+.inputWrapper {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+
+}
+
+.inputElement {
+  padding: 0 10px;
+  border-radius: 10px;
+  background-color: rgba(182, 167, 167, 0.67);
+  width: 70%;
+}
+
+.btn {
+  transition: ease-in-out 0.4s;
+  width: 20%;
+  border-radius: 10px;
+  background-color: #4265bd;
+  border: rgba(169, 169, 169, 0.37) 2px solid;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #6c9e7d;
+  }
+}
+
+.hideButton {
+  background-color: #72cacb;
+}
+
+@media (max-width: 1200px) {
+  .btn {
+    width: 22%;
+  }
+}
+
+@media (max-width: 991px) {
+  .btn {
+    width: 22%;
+  }
+}
+
+@media (max-width: 767px) {
+  .inputElement {
+    width: 60%;
+  }
+  .btn {
+    width: 25%;
+  }
+}
+
+@media (max-width: 575px) {
+  .inputElement {
+    width: 50%;
+    font-size: 12px;
+  }
+  .btn {
+    width: 40%;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+
+
+@media (max-width: 370px) {
+  .inputElement {
+    width: 40%;
+    font-size: 10px;
+  }
+  .btn {
+    width: 40%;
+    font-size: 10px;
+  }
+}
+

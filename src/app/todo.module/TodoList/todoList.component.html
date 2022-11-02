@@ -1,0 +1,15 @@
+<div class="inputWrapper">
+
+  <input class="inputElement"
+         (keydown)="addTodoOnEnter($event,inpElem)"
+         [ngModel]="inpElem.value"
+         [ngStyle]="{backgroundColor: inpElem.value ? 'rgba(182, 167, 167, 0.67)' : 'rgb(180, 189, 222,0.5)'}"
+         #inpElem placeholder="Введіть завдання">
+
+  <button class="btn" [ngClass]="inpElem.value ? 'button' : 'hideButton' "
+          (click)="addTodo(inpElem)">{{inpElem.value ? 'Додати завдання' : 'Нічого нема :(('}}
+  </button>
+
+</div>
+
+<app-todo-item *ngFor="let item of todos" [todo]="item" (deleteTodo)="removeItem($event)"></app-todo-item>

@@ -1,0 +1,50 @@
+.items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6c9e7d;
+  border-radius: 10px;
+  min-height: 50px;
+  max-width: 100%;
+  font-size: 24px;
+  color: black;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  transition: ease-in-out 0.3s;
+  overflow-wrap: anywhere;
+
+  &:hover {
+    background-color: darkgray;
+  }
+
+  .items__img {
+    background: url('https://w7.pngwing.com/pngs/643/421/png-transparent-computer-icons-shopping-cart-shopping-cart-text-service-logo.png') center center/cover no-repeat;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 767px) {
+  .items {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .items {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .items {
+    padding: 0 7px;
+    font-size: 14px;
+  }
+}
+
